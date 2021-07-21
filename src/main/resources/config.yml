@@ -1,0 +1,3 @@
+resourcepack: https://download.nodecdn.net/containers/nodecraft/minepack/176611e076c3cbd09903b42c337fb712.zip
+force: true
+request-onlogin: false

@@ -1,0 +1,8 @@
+name: AcceptResourcepack
+version: 1.0
+author: MankaiStep
+main: mk.plugin.ar.main.MainAR
+commands:
+    goitainguyen:
+        description: Cai dat goi tai nguyen
+        aliases: [res, tainguyen, gtn, goitainguyen]
