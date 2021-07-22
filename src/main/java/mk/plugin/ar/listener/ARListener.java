@@ -40,8 +40,8 @@ public class ARListener implements Listener {
 			player.sendMessage("");
 			Bukkit.getScheduler().runTaskLater(MainAR.getPlugin(MainAR.class), () -> {
 				player.setResourcePack(Configs.RESOURCEPACK);
-			}, 40);
-		}, 5);
+			}, 20);
+		}, 30);
 		
 
 	}
