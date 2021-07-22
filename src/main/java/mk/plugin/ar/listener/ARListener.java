@@ -24,21 +24,13 @@ public class ARListener implements Listener {
 	}
 
 	@EventHandler
-	public void onQuit(PlayerQuitEvent e) {
-		var p = e.getPlayer();
-		Bukkit.getScheduler().runTask(MainAR.getPlugin(MainAR.class), () -> {
-			if (e.getQuitMessage() == null) bypassed.add(p.getName());
-			else bypassed.remove(p.getName());
-		});
-	}
-
-	@EventHandler
 	public void onJoin(PlayerJoinEvent e) {
 		Player player = e.getPlayer();
 		if (!Configs.REQUEST_ONLOGIN) return;
 		if (bypassed.contains(player.getName())) return;
 		
 		Bukkit.getScheduler().runTaskLater(MainAR.getPlugin(MainAR.class), () -> {
+			if (player.hasMetadata("skybattle-quit")) return;
 			player.sendTitle("§2§l§oGÓI TÀI NGUYÊN", "", 0, 100, 0);
 			player.sendMessage("");
 			player.sendMessage("§7-----------------------------------------------");
